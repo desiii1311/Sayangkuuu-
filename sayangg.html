@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabolee Yaa... Sayangg</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    .love-button {
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai sayangg!</h1>
+  <p>Tunggu dulu ya..</p>
+  <button class="love-button" onclick="showMessage()">Sentuh LOVEnya!</button>
+  <div class="message" id="message"></div>
+
+  <script>
+    function showMessage() {
+      const messages = [
+        "Alooo Sayangggg 🫢",
+        "Sayanggku Masih Ngambek? 🫣",
+        "Udah Ngga 💗 Masih 🤬",
+        "Ciee ngambekan gitu doang 😋😝",
+        "Nanti cepet tua loh 🫣🤣",
+        "Yeaaayy! 🥳 Maaciiiww udah ga ngambek 😋",
+        "Sekarang Aku Mau Nanya Nih 😝🩷",
+        "I Love You 💗",
+        "Jawab di Sini yaa! 😆",
+        "789C456-123+0%×= I Love U 1% 💗",
+        "Gabolee ngambek lagi yaa 😍😋🩷"
+      ];
+      let index = 0;
+      const messageDiv = document.getElementById("message");
+      const interval = setInterval(() => {
+        if (index < messages.length) {
+          messageDiv.innerHTML = messages[index];
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
